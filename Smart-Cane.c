@@ -19,12 +19,10 @@ int main(void)
     printf("   Inicializando periféricos e sensores...\n");
     printf("=========================================\n");
 
-    // Inicializa os sensores de ultrassom
     ultrassonico_init();
-
-    // Inicializa todos os atuadores (Buzzer, Motor e LEDs)
     alerta_init();
-
+    leds_init();
+    buzzer_init();
     printf("[SISTEMA] Inicializacao concluida com sucesso!\n\n");
 
     // Loop Principal (Super Loop)
@@ -36,13 +34,14 @@ int main(void)
 
         // 2. Processa os alertas visuais, sonoros e táteis
         // Nota: alerta_processar_sensor ja atualiza os LEDs internamente!
+        leds_processar_sensor(distancia_superior, distancia_inferior);
         alerta_processar_sensor(distancia_superior, distancia_inferior);
-
+        
         // 3. Monitoramento Serial (Imprime as leituras em tempo real para coleta de dados)
         printf("[LEITURA] Sup: %3lu cm | Inf: %3lu cm\n", distancia_superior, distancia_inferior);
 
         // 4. Intervalo de amostragem responsivo (~10 leituras por segundo)
-        sleep_ms(100);
+        sleep_ms(2000);
     }
 
     return 0;
