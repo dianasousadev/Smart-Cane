@@ -44,6 +44,12 @@ void buzzer_off(void)
     s_buzzer_estado = false;
 }
 
+// Função de leitura do estado para o módulo de alerta consultar
+bool buzzer_estado(void)
+{
+    return s_buzzer_estado;
+}
+
 void buzzer_beep_blocking(uint32_t tempo_ms)
 {
     buzzer_on();

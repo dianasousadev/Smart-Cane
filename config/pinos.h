@@ -26,6 +26,6 @@
 #define BUZZER_PIN      21
 #define BOTAO_PIN       5
 #define ALERTA_PIN      20
-#define MOTOR_PIN       8
+#define MOTOR_PIN       9
 
 #endif // PINOS_H

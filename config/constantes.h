@@ -32,8 +32,6 @@
 #define SENSOR_INF_TRIG_PIN         4
 #define SENSOR_INF_ECHO_PIN         5
 
-#define MOTOR_VIBRACAO_PIN          18      // Pino de saída para a base do transistor do motor
-
 /**
  * @brief Configurações de velocidade dos atuadores.
  */

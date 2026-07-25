@@ -20,6 +20,7 @@ void buzzer_on(void);
  */
 void buzzer_off(void);
 
+bool buzzer_estado(void);
 /**
  * @brief Emite um beep bloqueante pela duração especificada.
  * 
