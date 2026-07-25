@@ -3,14 +3,15 @@
 #include "config/config.h"
 #include "drivers/ultrasonic/ultrasonic.h"
 #include "drivers/alert/alert.h"
-#include "drivers/motor/motor.h"
+
+
 int main(void)
 {
     // Inicializa a comunicação Serial via USB para o Monitor Serial
     stdio_init_all();
     ultrassonico_init();
     alerta_init();
-    motor_init();
+
     
     // Loop Principal (Super Loop)
     while (true)
@@ -23,7 +24,6 @@ int main(void)
         // Nota: alerta_processar_sensor ja atualiza os LEDs internamente!
         alerta_processar_sensor(distancia_superior, distancia_inferior);
        
-        motor_stop();
         // 3. Monitoramento Serial (Imprime as leituras em tempo real para coleta de dados)
         printf("[LEITURA] Sup: %3lu cm | Inf: %3lu cm\n", distancia_superior, distancia_inferior);
 
