@@ -69,8 +69,20 @@ Bengala_Safe_Step
 │   │   └── motor.h
 │   │
 │   └── alerta
-│       ├── alerta.c
-│       └── alerta.h
+│   │   ├── motor.c
+│   │   └── motor.h
+│   │
+│   └── telemetria
+|   |   ├── telemetria.c
+│   |   └── telemetria.h
+|   |
+|   └── wifi
+│       |── wifi.c
+|       └── wifi.h
+|
+├── smart-cane-analise
+│   └── coletor_dados.py
+|       
 │
 ├── config
 │   └── config.h
@@ -152,18 +164,16 @@ Processamento RP2040
 
 ✅ Integração dos sensores com sistema de alerta.
 
+✅ Integração do Wi-Fi com sistema para coleta de dados.
 ---
 
 # 🚀 Próximas melhorias
 
-- [ ] Implementação de diferentes níveis de vibração conforme distância;
+- [x] Implementação de diferentes níveis de vibração conforme distância;
 - [ ] Testes de precisão dos sensores;
 - [ ] Redução de falsos positivos;
 - [ ] Desenvolvimento de PCB própria;
-- [ ] Uso de bateria recarregável;
-- [ ] Inclusão de GPS para localização;
-- [ ] Integração com aplicativo móvel;
-- [ ] Validação com usuários.
+- [x] Uso de bateria recarregável;
 
 ---
 

@@ -37,4 +37,8 @@
  */
 #define MOTOR_SPEED_ALERTA          80      // Velocidade do motor durante o alerta (0 a 100%)
 
+
+
+
+
 #endif // CONSTANTES_H

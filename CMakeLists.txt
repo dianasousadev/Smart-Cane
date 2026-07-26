@@ -42,6 +42,8 @@ drivers/leds/leds.c
 drivers/ultrasonic/ultrasonic.c
 drivers/alert/alert.c
 drivers/motor/motor.c
+drivers/wifi/wifi.c
+drivers/telemetria/telemetria.c
 )
 
 pico_set_program_name(Smart-Cane "Smart-Cane")
@@ -56,6 +58,7 @@ target_link_libraries(Smart-Cane
         pico_stdlib
          hardware_pwm
         hardware_clocks
+        pico_cyw43_arch_lwip_threadsafe_background # <-- BIBLIOTECA DO WI-FI
         )
 
 # Add the standard include files to the build
