@@ -23,7 +23,7 @@
 /**
  * @brief Mapeamento dos Atuadores e Entradas de Interatividade.
  */
-#define BUZZER_PIN      21
+#define BUZZER_PIN      20
 #define BOTAO_PIN       5
 #define ALERTA_PIN      20
 #define MOTOR_PIN       9

@@ -9,7 +9,7 @@
 
 #define WIFI_SSID "FULL-STACK"  // Substitua pelo nome da sua rede Wi-Fi
 #define WIFI_PASS "52391810" // Substitua pela senha da sua rede Wi-Fi
-#define IP_NOTEBOOK   "192.168.0.7" // <-- Coloque o IP do seu notebook aqui!
+#define IP_NOTEBOOK "192.168.0.35" // <-- Coloque o IP do seu notebook aqui!
 #define PORTA_UDP     5005
 
 
@@ -18,6 +18,12 @@ int main(void)
     // Inicializa a comunicação Serial via USB para o Monitor Serial
     stdio_init_all();
     sleep_ms(2000); // Aguarda a serial USB
+    
+      printf("=== BENGALA SAFE STEP ===\n");
+    printf("Iniciando sistema...\n");
+
+    ultrassonico_init();
+    alerta_init();
     ultrassonico_init();
     alerta_init();
     // Conecta ao Wi-Fi e inicializa o emissor UDP
